@@ -86,3 +86,43 @@ Can we use google search ?
 24. Implemented Recursion for nested comments
 
 25. We can see nested comments of 2 levels on youtube and infinite nested chaining in reddit
+
+26. Built Live Chat in YouTube
+    1. Live Chat >>> Infinte Scroll >>>>> Pagination
+
+## Challenges of Live Chat
+
+    - Get Data Live - Data Layer
+    - Update the UI on the Page - UI Layer
+
+- 2 ways to handle live data
+
+  1. Websockets - 2 way connection established. It's a kind of handshake between Server and UI
+     1.1 - Bi-Directional live data (Backend to UI and vice versa)
+     1.2 - No Regular Interval (Data come in right now or at some time, 1s, 10s)
+     1.3 - Can send data whenever we want to be...
+
+     Applications:\*
+
+     - Trading Apps like Zerodha
+
+  2. API Polling (Long Polling) - Uni (One directional) - Data flows from Server to UI, After an Interval
+     2.1 - Keep polling data after 1s, 10s
+     Applications:
+     \*\*\*----------
+     - GMail
+     - Cricbuzz - Create api pooling after 25s
+
+27. YouTube uses API Polling
+28. Live Chat Option
+    28.1 - Added Comments List Section
+29. Chat Message Option
+30. Added helper file, chatSlice
+31. Added setInterval for chat messages using useEffect()
+
+- API Polling for live data
+
+32. Redux for storing live chat messages
+33. Implemented chat adding feature
+34. Improves performance by reducing unnecessary api calls and webpage performant using splice and unshift
+35. Scrolling effect for live data
